@@ -64,6 +64,38 @@ body {
     transition: all .4s ease;
 }
 
+
+/* width */
+
+::-webkit-scrollbar {
+    width: 8px;
+    background: var(--first-color);
+    overflow-x: hidden;
+}
+
+
+/* Track */
+
+ ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+
+/* Handle */
+
+ ::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 5px;
+    background: var(--first-color);
+}
+
+
+/* Handle on hover */
+
+ ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
 body.active-m {
     --degree-dark: #121212;
     --degree-light: #2d2d2d;
@@ -854,11 +886,10 @@ textarea.contact__input {
     visibility: hidden;
 }
 
-.inputBox i {
-    position: absolute;
-    top: 15px;
-    right: 10px;
-    visibility: hidden;
+.inputBox small {
+    display: none;
+    color: red;
+    font-size: 12px;
 }
 
 .contact__button {
@@ -925,6 +956,51 @@ textarea.contact__input {
     100% {
         left: 0%;
     }
+}
+
+.inputBox.vfexx .contact__input:valid~span,
+.inputBox.vfexx .contact__input:focus~span {
+    background-color: red;
+}
+
+.inputBox.vfexx .contact__input:valid~span~i,
+.inputBox.vfexx .contact__input:focus~span~i {
+    color: red;
+}
+
+.inputBox.vfsxx .contact__input:valid,
+.inputBox.vfsxx .contact__input:focus {
+    border: 1px solid #48ff00;
+}
+
+.inputBox.vfexx .contact__input:valid,
+.inputBox.vfexx .contact__input:focus {
+    border: 1px solid red;
+}
+
+.inputBox.vfsxx .contact__input:valid~span,
+.inputBox.vfsxx .contact__input:focus~span {
+    background-color: #48ff00;
+}
+
+.inputBox.vfsxx .contact__input:valid~span~i.vfsixx,
+.inputBox.vfsxx .contact__input:focus~span~i.vfsixx {
+    color: #48ff00;
+    visibility: visible;
+}
+
+.inputBox.vfexx .contact__input:valid~span~i.vfeixx,
+.inputBox.vfexx .contact__input:focus~span~i.vfeixx {
+    color: red;
+    visibility: visible;
+}
+
+.inputBox.vfexx small {
+    display: block;
+}
+
+.inputBox.vfexx .characters {
+    bottom: 17px;
 }
 
 

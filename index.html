@@ -62,7 +62,7 @@
                 <div class="button btn">
                     <div class="content">
                         <i class="fa-solid i-change fa-cloud-arrow-down"></i>
-                        <a class="button-text">Download Cv</a>
+                        <a href="./assets/my_cv.pdf" download="./assets/my_cv.pdf" class="button-text">Download Cv</a>
                     </div>
                 </div>
             </div>
@@ -212,21 +212,21 @@
                 <div class="work__img">
                     <img src="img/gestionCommande.PNG" alt="">
                     <div class="img-text">
-                        <h3>e-store</h3>
+                        <h3>gestion de commande</h3>
                         <small>HTML-CSS-JavaScript-Bootstrap 5-PHP Pure-MySQL</small>
                     </div>
                 </div>
                 <div class="work__img">
                     <img src="img/radop.PNG" alt="">
                     <div class="img-text">
-                        <h3>e-store</h3>
+                        <h3>gestion de paiement</h3>
                         <small>HTML-CSS-JavaScript-Bootstrap 5-PHP Pure-MySQL-JQuery</small>
                     </div>
                 </div>
                 <div class="work__img app-mobile">
                     <!-- <img src="img/app-mobile.png" alt=""> -->
                     <div class="img-text">
-                        <h3>e-store</h3>
+                        <h3>gestion d'employé </h3>
                         <small>XML-Java-SQLite</small>
                     </div>
                 </div>
@@ -259,7 +259,9 @@
                         <div class="phone details">
                             <i class="fa-solid fa-phone"></i>
                             <div class="topic">Phone</div>
-                            <div class="text-one">+212709239818</div>
+                            <div class="text-one">Number</div>
+                            <div class="text-two">+212709239818</div>
+
                         </div>
                         <div class="email details">
                             <i class="fa-solid fa-envelope"></i>
@@ -272,33 +274,41 @@
                         <div class="topic-text">Send us a message</div>
                         <p>If to here any work from me or any types of queries , you can send me a message from here . It's my pleasure to help you.</p>
 
-                        <form action="" class="contact__form">
+                        <form action="" id="form" class="contact__form">
                             <div class="inputBox">
-                                <input type="text" class="contact__input" required>
+                                <input type="text" id="fullname" class="contact__input" required>
                                 <span class="spn-floating">Full name</span>
-                                <i class="fa-solid fa-circle-check"></i>
+                                <i class="fa-solid fa-circle-check vfsixx"></i>
+                                <i class="fa-solid fa-circle-exclamation vfeixx"></i>
+                                <small>error message</small>
                             </div>
                             <div class="inputBox">
-                                <input type="text" class="contact__input" required>
+                                <input type="email" id="email" class="contact__input" required>
                                 <span class="spn-floating">Email</span>
-                                <i class="fa-solid fa-circle-check"></i>
+                                <i class="fa-solid fa-circle-check vfsixx"></i>
+                                <i class="fa-solid fa-circle-exclamation vfeixx"></i>
+                                <small>error message</small>
                             </div>
                             <div class="inputBox">
-                                <input type="text" class="contact__input" required>
+                                <input type="text" id="subject" class="contact__input" required>
                                 <span class="spn-floating">Subject</span>
-                                <i class="fa-solid fa-circle-check"></i>
+                                <i class="fa-solid fa-circle-check vfsixx"></i>
+                                <i class="fa-solid fa-circle-exclamation vfeixx"></i>
+                                <small>error message</small>
                             </div>
                             <div class="inputBox message">
-                                <textarea name="" id="" cols="30" rows="10" class="contact__input input-msg" required></textarea>
+                                <textarea name="" id="umessage" cols="30" rows="10" class="contact__input input-msg" required></textarea>
                                 <span class="spn-floating">Write your message here</span>
                                 <div class="characters">
                                     <span class="signal_num">0</span>
                                     <span class="limit_num">/100</span>
                                 </div>
-                                <i class="fa-solid fa-circle-check"></i>
+                                <i class="fa-solid fa-circle-check vfsixx"></i>
+                                <i class="fa-solid fa-circle-exclamation vfeixx"></i>
+                                <small>error message</small>
                             </div>
 
-                            <button type="button" class="contact__button button_c">
+                            <button type="submit" class="contact__button button_c">
                                 Send Now
                                 <span></span>
                                 <span></span>
@@ -315,7 +325,7 @@
 
         <!----- Start Footer ----->
         <footer class="footer">
-            <p class="footer__title">Yassine</p>
+            <p class="footer__title">Yassine ELHAJJY</p>
 
             <div class="footer__social">
                 <a href="https://www.facebook.com/elhajjy.yassine" class="footer__icon"><i class="fa-brands fa-facebook-square"></i></a>

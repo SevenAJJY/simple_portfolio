@@ -116,8 +116,7 @@ button.addEventListener('click', (e) => {
         let link = document.querySelector('.button-text');
         button.classList.remove('active-button');
         document.querySelector('.i-change').classList.replace('fa-cloud-arrow-down', 'fa-circle-check')
-        link.setAttribute('href', './assets/cv.pdf');
-        link.setAttribute('download', './assets/cv.pdf');
+
         link.innerText = 'Completed';
     }, 3000);
 
@@ -152,3 +151,94 @@ textarea.addEventListener("keyup", () => {
     valLength > 100 ? inputBox.classList.add('error') : inputBox.classList.remove('error');
 
 });
+
+/**
+ * Form validation
+ */
+
+const form = document.getElementById("form");
+const fullName = document.getElementById("fullname");
+const email = document.getElementById("email");
+const subject = document.getElementById("subject");
+const umessage = document.getElementById("umessage");
+
+form.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    checkInputs();
+});
+
+function checkInputs() {
+    //formErrors
+    let formErrors = [];
+
+    const fullNameValue = fullName.value.trim();
+    const emailValue = email.value.trim();
+    const subjectValue = subject.value.trim();
+    const umessageValue = umessage.value.trim();
+
+    if (fullNameValue === "") {
+        setErrorFor(fullName, "Full name cannot be Empty");
+
+    } else if (fullNameValue.length < 4) {
+        setErrorFor(fullName, "full name must be large than  4 chars");
+    } else {
+        setSuccessFor(fullName);
+    }
+
+    if (emailValue === "") {
+        setErrorFor(email, "email cannot be Empty");
+    } else if (!isEmail(emailValue)) {
+        setErrorFor(email, "Email is not valid!");
+    } else {
+        setSuccessFor(email);
+    }
+
+    if (subjectValue === "") {
+        setErrorFor(subject, "Subject cannot be Empty");
+    } else if (subjectValue.length < 4) {
+        setErrorFor(subject, "Subject must be large than 4 chars");
+    } else {
+        setSuccessFor(subject);
+    }
+
+    if (umessageValue === "") {
+        setErrorFor(umessage, "Message cannot be Empty");
+    } else if (umessageValue.length > 100) {
+        setErrorFor(umessage, "Message must be less than  100 chars");
+    } else if (umessageValue.length < 30) {
+        setErrorFor(umessage, "Message must be large than 30 chars");
+    } else {
+        setSuccessFor(umessage);
+    }
+}
+
+function setErrorFor(inputField, message) {
+    const inputBox = inputField.parentElement;
+    const small = inputBox.querySelector('small');
+    small.textContent = message;
+    if (inputBox.classList.contains('vfsxx')) {
+        inputBox.classList.replace('vfsxx', 'vfexx');
+    } else {
+        inputBox.classList.add('vfexx')
+    }
+}
+
+function setSuccessFor(inputField) {
+    const inputBox = inputField.parentElement;
+    if (inputBox.classList.contains('vfexx')) {
+        inputBox.classList.replace('vfexx', 'vfsxx');
+    } else {
+        inputBox.classList.add('vfsxx');
+    }
+
+}
+
+function isEmail(input) {
+    var validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+    if (input.match(validRegex)) {
+        return true;
+    } else {
+        return false;
+    }
+}
