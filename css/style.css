@@ -260,6 +260,14 @@ img {
     color: var(--degree-text-color);
 }
 
+.ltxx {
+    background-color: var(--first-color);
+    border-radius: 3px;
+    padding: 4px;
+    color: #fff;
+    font-size: 17px;
+}
+
 .nav__toggle {
     color: var(--degree-text-color);
     font-size: 1.5rem;
@@ -1110,7 +1118,6 @@ textarea.contact__input {
         margin-bottom: var(--mb-6);
     }
     .section-title::after {
-        /* width: 80px; */
         top: 3rem;
     }
     .nav {
@@ -1137,9 +1144,6 @@ textarea.contact__input {
     }
     .home {
         height: 100vh;
-    }
-    .home__data {
-        align-self: flex-end;
     }
     .home__social {
         padding-top: 0;
