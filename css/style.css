@@ -966,7 +966,7 @@ textarea.contact__input {
     transition: all .3s ease;
     transform: scale(1);
     box-shadow: 2px 0px 2px #cfcfcf80, 2px 0px 2px #cfcfcf80, 0px 2px 2px #cfcfcf80, -0px -2px 2px #cfcfcf80, inset 2px 0px 2px #cfcfcf80, inset 2px 0px 2px #cfcfcf80, inset 2px 0px 2px #cfcfcf80, inset 2px 0px 2px #ff000080;
-    text-shadow: 2px 2px 2px var(--first-color), 2px 2px 2px var(--first-color);
+    text-shadow: 2px 2px 30px var(--first-color), -2px -2px 30px var(--first-color);
     animation: animateSocial 3s linear infinite;
 }
 
@@ -993,7 +993,12 @@ textarea.contact__input {
 }
 
 .footer__icon:nth-child(3) i:hover {
-    background-color: #1da1f2;
+    background-color: #535658;
+    transform: scale(1.1);
+}
+
+.footer__icon:nth-child(4) i:hover {
+    background-color: #016dd3;
     transform: scale(1.1);
 }
 
