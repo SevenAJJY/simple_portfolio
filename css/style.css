@@ -276,7 +276,7 @@ img {
     row-gap: 1rem;
     position: relative;
     transition: all .4s ease;
-    background-image: url('../img/bg7.svg');
+    background-image: url('../img/bg.svg');
     width: 100%;
     background-size: cover;
     background-position: center;
@@ -593,6 +593,27 @@ img {
     width: 90%;
 }
 
+.skills__java {
+    width: 50%;
+}
+
+.skills__py {
+    width: 50%;
+}
+
+.skills__sql {
+    width: 80%;
+}
+
+.skills__data.last p {
+    width: 100%;
+    letter-spacing: 10px;
+    font-size: 22px;
+    text-align: center;
+    font-weight: 800;
+    color: var(--first-color);
+}
+
 .skills__img {
     border-radius: .5rem;
 }
@@ -618,6 +639,14 @@ img {
     text-align: center;
     position: relative;
     color: #fff;
+}
+
+.work__img.app-mobile {
+    /* height: 200px; */
+    background-image: url('../img/app-mobile.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .img-text,
