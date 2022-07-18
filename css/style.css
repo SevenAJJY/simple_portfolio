@@ -1209,3 +1209,20 @@ textarea.contact__input {
         transform: translateY(40px);
     }
 }
+
+@media (max-width:500px) {
+    .img-text {
+        padding: 10px;
+        transform: translateY(220px);
+    }
+    .img-text h3 {
+        font-size: 25px;
+        margin-bottom: 15px;
+    }
+    .img-text small {
+        font-size: 12px;
+    }
+    .work__img:hover .img-text {
+        transform: translateY(20px);
+    }
+}

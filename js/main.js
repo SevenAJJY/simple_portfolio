@@ -164,7 +164,9 @@ const umessage = document.getElementById("umessage");
 
 form.addEventListener('submit', (e) => {
     e.preventDefault();
-
+    // if (checkInputs().length > 0) {
+    //     e.preventDefault();
+    // }
     checkInputs();
 });
 
@@ -178,39 +180,48 @@ function checkInputs() {
     const umessageValue = umessage.value.trim();
 
     if (fullNameValue === "") {
+        formErrors.push("Full name cannot be Empty");
         setErrorFor(fullName, "Full name cannot be Empty");
-
     } else if (fullNameValue.length < 4) {
+        formErrors.push("full name must be large than  4 chars");
         setErrorFor(fullName, "full name must be large than  4 chars");
     } else {
         setSuccessFor(fullName);
     }
 
     if (emailValue === "") {
+        formErrors.push("email cannot be Empty");
         setErrorFor(email, "email cannot be Empty");
     } else if (!isEmail(emailValue)) {
+        formErrors.push("Email is not valid!");
         setErrorFor(email, "Email is not valid!");
     } else {
         setSuccessFor(email);
     }
 
     if (subjectValue === "") {
+        formErrors.push("Subject cannot be Empty");
         setErrorFor(subject, "Subject cannot be Empty");
     } else if (subjectValue.length < 4) {
+        formErrors.push("Subject must be large than 4 chars");
         setErrorFor(subject, "Subject must be large than 4 chars");
     } else {
         setSuccessFor(subject);
     }
 
     if (umessageValue === "") {
+        formErrors.push("Message cannot be Empty");
         setErrorFor(umessage, "Message cannot be Empty");
     } else if (umessageValue.length > 100) {
+        formErrors.push("Message must be less than  100 chars");
         setErrorFor(umessage, "Message must be less than  100 chars");
     } else if (umessageValue.length < 30) {
+        formErrors.push("Message must be large than 30 chars");
         setErrorFor(umessage, "Message must be large than 30 chars");
     } else {
         setSuccessFor(umessage);
     }
+    return formErrors;
 }
 
 function setErrorFor(inputField, message) {
