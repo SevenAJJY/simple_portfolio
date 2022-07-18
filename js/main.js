@@ -85,9 +85,9 @@ const modeToggle = document.querySelector('.mode-darkLight');
 const body = document.querySelector('body');
 const icon = modeToggle.querySelector('i');
 
-let getMode = localStorage.getItem("modes");
+let getMode = localStorage.getItem("mode");
 if (getMode === "dark-mode") {
-    body.classList.toggle('dark');
+    body.classList.toggle('active-m');
 }
 
 modeToggle.addEventListener("click", () => {
@@ -100,10 +100,10 @@ modeToggle.addEventListener("click", () => {
         icon.classList.replace('fa-sun', 'fa-moon');
     }
 
-    if (!body.classList.contains('dark')) {
-        localStorage.setItem("modes", "light-mode");
+    if (!body.classList.contains('active-m')) {
+        localStorage.setItem("mode", "light-mode");
     } else {
-        localStorage.setItem("modes", "dark-mode");
+        localStorage.setItem("mode", "dark-mode");
     }
 });
 
