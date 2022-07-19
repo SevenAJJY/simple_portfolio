@@ -1200,17 +1200,17 @@ textarea.contact__input {
     }
     .img-text {
         padding: 20px;
-        transform: translateY(220px);
+        transform: translateY(200px);
     }
     .img-text h3 {
-        font-size: 40px;
+        font-size: 30px;
         margin-bottom: 20px;
     }
     .img-text small {
         font-size: 14px;
     }
     .work__img:hover .img-text {
-        transform: translateY(40px);
+        transform: translateY(20px);
     }
 }
 
